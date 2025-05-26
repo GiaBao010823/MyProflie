@@ -38,3 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const typed = new Typed('#changing-text', options);
   }, 1500);
 });
+
+// Navbar scroll effect
+document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  });
+});

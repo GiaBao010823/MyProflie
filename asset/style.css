@@ -1,10 +1,25 @@
+:root {
+  --primary: #6C63FF;
+  --secondary: #4A45B1;
+  --accent: #8E2DE2;
+  --gradient: linear-gradient(45deg, #8E2DE2, #4A00E0);
+  --dark: #121212;
+  --dark-lighter: #1e1e1e;
+  --text-light: #F8F9FA;
+  --text-muted: #B0B0B0;
+}
+
 body {
-  padding-top: 70px; /* Điều chỉnh theo chiều cao của navbar */
+  background-color: var(--dark);
+  color: var(--text-light);
+  font-family: 'Poppins', sans-serif;
+  padding-top: 76px; /* Điều chỉnh theo chiều cao của navbar */
 }
 
 /* Tăng độ nổi bật cho navbar với shadow */
 .navbar.fixed-top {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
@@ -65,6 +80,16 @@ body {
 .navbar {
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: var(--dark) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+  color: var(--primary) !important;
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
 }
 
 .navbar-nav .nav-link {
@@ -101,27 +126,215 @@ body {
   transform: translate(0) !important;
 }
 
+/* Buttons */
+.btn-primary {
+  background: var(--gradient);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(142, 45, 226, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--gradient);
+  color: white;
+}
+
+/* Section headers */
+.section-title h2 {
+  color: var(--text-light);
+}
+
+.section-title h2 span {
+  color: var(--primary);
+}
+
+.title-underline {
+  background: var(--gradient);
+}
+
+/* Social buttons */
 .btn-social {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   transition: all 0.3s;
-  margin-right: 10px;
 }
 
-.btn-social i {
-  font-size: 18px;
+.btn-social-primary {
+  background: var(--gradient);
+  color: white;
 }
 
-.btn-social:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+.btn-social-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Cards and dividers */
+.card {
+  background-color: var(--dark-lighter);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Section styling */
+section {
+  padding: 100px 0;
+  position: relative;
+}
+
+/* Fix navbar overlap with section content */
+section {
+  scroll-margin-top: 80px; /* Điều chỉnh độ cao tùy theo navbar */
+}
+
+/* Add extra padding to sections */
+section {
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+/* Offset anchor links */
+html {
+  scroll-padding-top: 80px; /* Điều chỉnh tương tự với scroll-margin-top */
+}
+
+.section-bg-light {
+  background-color: #1a1a1a;
+}
+
+/* Section title styling */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #ffc107;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title-underline:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  left: 45px;
+  top: 0;
+}
+
+/* Section divider */
+.section-divider {
+  padding: 20px 0;
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,193,7,0.5) 50%, rgba(255,255,255,0) 100%);
 }
 
 /* Đảm bảo các icon hiển thị */
 .fab, .fas {
   display: inline-block !important;
+}
+
+/* Offset for fixed navbar */
+body {
+  padding-top: 76px;
+}
+
+section:first-of-type {
+  margin-top: 0;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  /* Hero section */
+  .hero-section {
+    padding: 3rem 0 !important;
+    text-align: center;
+  }
+  
+  /* Adjust heading sizes */
+  .display-3 {
+    font-size: 2.5rem !important;
+  }
+  
+  /* Social icons - center align */
+  .hero-section .d-flex.gap-3 {
+    justify-content: center !important;
+  }
+  
+  /* Avatar container */
+  .glowing-circle {
+    max-width: 220px !important;
+    margin: 2rem auto !important;
+  }
+  
+  /* Section spacing */
+  .section-divider {
+    margin: 1rem 0 !important;
+  }
+  
+  /* Adjust card sizes */
+  .card-title {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Footer columns */
+  footer .col-md-6 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  /* Further reduce heading size */
+  .display-3 {
+    font-size: 2rem !important;
+  }
+  
+  /* Adjust social buttons */
+  .btn-social {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Stack buttons */
+  .btn-container .btn {
+    margin-bottom: 0.5rem;
+    display: block;
+    width: 100%;
+  }
 }
