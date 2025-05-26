@@ -171,24 +171,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  color: white;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-social-primary {
-  background: var(--gradient);
-  color: white;
+  background-color: #3b5998 !important;
+  border-color: #3b5998 !important;
+  color: white !important;
 }
 
-.btn-social-outline {
-  background: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
+.btn-social-primary:hover {
+  background-color: #2d4373 !important;
+  border-color: #2d4373 !important;
+  box-shadow: 0 0 0 0.25rem rgba(59, 89, 152, 0.5) !important;
 }
 
-/* Cards and dividers */
-.card {
-  background-color: var(--card-bg) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+/* Class cho các mạng xã hội khác */
+.btn-social-linkedin {
+  background-color: #0077b5 !important;
+  border-color: #0077b5 !important;
+  color: white !important;
+}
+
+.btn-social-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.btn-social-github {
+  background-color: #333 !important;
+  border-color: #333 !important;
+  color: white !important;
+}
+
+.btn-social-phone {
+  background-color: #4CAF50 !important;
+  border-color: #4CAF50 !important;
+  color: white !important;
 }
 
 /* Section styling */
@@ -388,4 +415,100 @@ section:first-of-type {
     display: block;
     width: 100%;
   }
+}
+
+/* Typing animation styles */
+.typed-cursor {
+  color: var(--primary-color);
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#typing-text {
+  min-width: 150px;
+  display: inline-block;
+}
+
+/* Social Media Buttons - Brand Colors */
+.btn-social {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  color: white;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Facebook */
+.btn-social.facebook {
+  background: linear-gradient(45deg, rgba(59, 89, 152, 0.8), rgba(59, 89, 152, 0.4));
+}
+.btn-social.facebook:hover {
+  background: #3b5998;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(59, 89, 152, 0.5);
+}
+
+/* LinkedIn */
+.btn-social.linkedin {
+  background: linear-gradient(45deg, rgba(0, 119, 181, 0.8), rgba(0, 119, 181, 0.4));
+}
+.btn-social.linkedin:hover {
+  background: #0077b5;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 119, 181, 0.5);
+}
+
+/* Phone */
+.btn-social.phone {
+  background: linear-gradient(45deg, rgba(76, 175, 80, 0.8), rgba(76, 175, 80, 0.4));
+}
+.btn-social.phone:hover {
+  background: #4CAF50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
+}
+
+/* Instagram */
+.btn-social.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.btn-social.instagram:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(225, 48, 108, 0.5);
+}
+
+/* Github */
+.btn-social.github {
+  background: linear-gradient(45deg, rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.4));
+}
+.btn-social.github:hover {
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(51, 51, 51, 0.5);
+}
+
+/* Glass morphism effect */
+.social-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 8px;
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

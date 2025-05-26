@@ -50,3 +50,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Typing Animation with delay
+document.addEventListener('DOMContentLoaded', function() {
+  // Đợi 3 giây sau khi trang load xong
+  setTimeout(() => {
+    const typingElement = document.getElementById('typing-text');
+    
+    if (typingElement) {
+      const typed = new Typed('#typing-text', {
+        strings: [
+          'Web Developer',
+          'UI/UX Designer',
+          'Frontend Developer',
+          'React Developer',
+          'Freelancer'
+        ],
+        typeSpeed: 80,         // Tốc độ gõ
+        backSpeed: 40,         // Tốc độ xóa
+        backDelay: 1500,       // Thời gian chờ trước khi xóa
+        startDelay: 500,       // Delay trước khi bắt đầu
+        loop: true,            // Lặp vô hạn
+        showCursor: true,      // Hiển thị con trỏ
+        cursorChar: '|',       // Ký tự con trỏ
+        autoInsertCss: true    // Tự động chèn CSS
+      });
+    }
+  }, 3000); // Delay 3 giây
+});
