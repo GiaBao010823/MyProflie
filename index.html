@@ -4,241 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gia Bảo - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="asset/style.css">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5e72e4',
+            'primary-hover': '#4a5de0',
+            accent: '#8b5cf6',
+            'accent-hover': '#7c3aed',
+            'dark-bg': '#1a1a2e',
+            'card-bg': '#222244',
+            'text-light': '#e2e8f0',
+            'text-muted': '#94a3b8',
+            facebook: '#3b5998',
+            linkedin: '#0077b5',
+            github: '#333',
+            phone: '#4CAF50',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+  <!-- CSS tùy chỉnh -->
+  <link rel="stylesheet" href="asset/css/custom.css">
 </head>
-<body class="bg-dark text-white">
+<body class="bg-dark-bg text-text-light pt-20">
 
-  <!-- HEADER (Navbar) -->
-<div id="header-placeholder"></div>
-  <!-- HERO -->
-<section class="hero-section py-5 my-4">
-  <div class="container">
-    <div class="row align-items-center justify-content-between">
-      <div class="col-lg-6 col-md-7 mb-5 mb-md-0 text-center text-md-start">
-        <p class="text-warning fs-5 mb-2 hero-animate-left">Hello World, I'm</p>
-        <h1 class="display-3 fw-bold mb-3 hero-animate-left">Diệp Gia Bảo</h1>
-        <h2 class="fs-2 mb-4 hero-animate-left">
-          <span class="me-2">I'm a</span>
-          <span class="text-primary" id="typing-text"></span>
-        </h2>
-        <p class="fs-5 text-secondary hero-animate-fade">Welcome to my personal website 👋</p>
-
-        <!-- Social Media CTA -->
-        <div class="mt-4 d-flex gap-3 hero-animate-fade justify-content-center justify-content-md-start" style="transition-delay: 0.8s">
-          <a href="https://www.facebook.com/share/16TiVpFaHP/" class="btn btn-social btn-social-primary">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="btn btn-social btn-social-outline">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="tel:+84123456789" class="btn btn-warning btn-social">
-            <i class="fas fa-phone-alt"></i>
-          </a>
-          <a href="#" class="btn btn-outline-light btn-social">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://github.com/GiaBao010823" class="btn btn-warning btn-social">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-5 text-center hero-animate-right">
-        <div class="position-relative glowing-circle mx-auto">
-          <img src="asset/images/avt/avt_dgb.jpg" alt="Avatar" class="rounded-circle img-fluid avatar-img">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DIVIDER -->
-<div class="section-divider">
-  <div class="container">
-    <div class="divider-line"></div>
-  </div>
-</div>
-
-  <!-- ABOUT -->
-<section id="about" class="py-5 my-4">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h2 class="text-warning mb-4">Về tôi</h2>
-        <p class="fs-5 text-secondary">Tôi là Diệp Gia Bảo, một nhà phát triển web chuyên nghiệp với kinh nghiệm trong việc xây dựng các ứng dụng web đa nền tảng và thiết kế giao diện người dùng.</p>
-        <p class="fs-5 text-secondary">Tôi đam mê công nghệ và luôn tìm kiếm những thách thức mới để cải thiện kỹ năng của mình.</p>
-        <a href="about.html" class="btn btn-primary mt-3">Xem thêm</a>
-      </div>
-      <div class="col-lg-6 text-center">
-        <img src="asset/images/about/about.jpg" alt="About Image" class="img-fluid rounded shadow-lg">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DIVIDER -->
-<div class="section-divider">
-  <div class="container">
-    <div class="divider-line"></div>
-  </div>
-</div>
-
-<!-- SKILLS -->
-<section id="skills" class="py-5 my-4">
-  <div class="container">
-    <h2 class="text-warning mb-4">Kỹ năng của tôi</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title">HTML & CSS</h5>
-            <p class="card-text">Tôi có kinh nghiệm vững vàng trong việc xây dựng giao diện web đẹp mắt và responsive bằng HTML và CSS.</p>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-            </div>
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+  
+  <!-- HERO SECTION -->
+  <section id="home" class="py-10 md:py-16 lg:py-24">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-wrap items-center">
+        <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+          <p class="text-yellow-400 text-lg mb-2 hero-animate-left">Xin chào, tôi là</p>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4 hero-animate-left">Diệp Gia Bảo</h1>
+          <h2 class="text-xl md:text-2xl mb-6 hero-animate-left">
+            <span class="mr-2">Tôi là</span>
+            <span class="text-yellow-400" id="typing-text"></span>
+          </h2>
+          <p class="text-gray-400 mb-8 hero-animate-fade">Chào mừng đến với website cá nhân của tôi!</p>
+          
+          <div class="flex flex-wrap gap-4 mb-8 hero-animate-fade">
+            <a href="#contact" class="px-6 py-3 bg-yellow-400 text-gray-900 font-medium rounded-lg hover:bg-yellow-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">Liên hệ ngay</a>
+            <a href="#projects" class="px-6 py-3 border border-yellow-400 text-yellow-400 font-medium rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">Xem dự án</a>
+          </div>
+          
+          <!-- Social Icons -->
+          <div class="flex gap-3 hero-animate-fade" style="transition-delay: 0.8s">
+            <a href="#" class="w-10 h-10 bg-facebook rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-linkedin rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-github rounded-full flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title">JavaScript</h5>
-            <p class="card-text">Tôi sử dụng JavaScript để tạo ra các tính năng tương tác và động cho trang web.</p>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title">ReactJS</h5>
-            <p class="card-text">Tôi có kinh nghiệm phát triển ứng dụng web hiện đại bằng ReactJS, giúp tăng hiệu suất và trải nghiệm người dùng.</p>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title">Node.js</h5>
-            <p class="card-text">Tôi sử dụng Node.js để xây dựng các ứng dụng web phía máy chủ hiệu quả và có khả năng mở rộng.</p>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title">Git & GitHub</h5>
-            <p class="card-text">Tôi sử dụng Git và GitHub để quản lý mã nguồn và hợp tác trong các dự án phát triển phần mềm.</p>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title">UI/UX Design</h5>
-            <p class="card-text">Tôi có khả năng thiết kế giao diện người dùng thân thiện và trải nghiệm người dùng tốt.</p>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-            </div>
+        
+        <div class="w-full lg:w-1/2 text-center hero-animate-right">
+          <!-- Responsive avatar size -->
+          <div class="relative mx-auto w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full flex items-center justify-center glow-effect">
+            <img src="asset/images/avt/avt_dgb.jpg" alt="Diệp Gia Bảo" class="rounded-full w-44 h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 object-cover border-4 border-yellow-400/50">
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- DIVIDER -->
-<div class="section-divider">
-  <div class="container">
-    <div class="divider-line"></div>
-  </div>
-</div>
+  </section>
+  
+  <!-- Các section khác (about, skills, projects, contact) -->
+  <!-- About Section -->
+  <div id="about-placeholder"></div>
+  
+  
 
-<!-- PROJECTS -->
-<section id="projects" class="py-5 my-4">
-  <div class="container">
-    <h2 class="text-warning mb-4">Dự án của tôi</h2>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <img src="asset/images/projects/project1.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Dự án 1</h5>
-            <p class="card-text">Mô tả ngắn về dự án 1.</p>
-            <a href="#" class="btn btn-warning">Xem chi tiết</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <img src="asset/images/projects/project2.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Dự án 2</h5>
-            <p class="card-text">Mô tả ngắn về dự án 2.</p>
-            <a href="#" class="btn btn-warning">Xem chi tiết</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card bg-dark text-white h-100">
-          <img src="asset/images/projects/project3.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Dự án 3</h5>
-            <p class="card-text">Mô tả ngắn về dự án 3.</p>
-            <a href="#" class="btn btn-warning">Xem chi tiết</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- DIVIDER -->
-<div class="section-divider">
-  <div class="container">
-    <div class="divider-line"></div>
-  </div>
-</div>
-<!-- CONTACT -->
-<section id="contact" class="py-5 my-4">
-  <div class="container">
-    <h2 class="text-warning mb-4">Liên hệ</h2>
-    <form>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <input type="text" class="form-control bg-white text-dark" placeholder="Họ và tên" required>
-        </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control bg-white text-dark" placeholder="Email" required>
-        </div>
-        <div class="col-12">
-          <textarea class="form-control bg-white text-dark" rows="4" placeholder="Tin nhắn" required></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-warning">Gửi</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
+  <!-- Initialize Typed.js -->
 
 
   <!-- FOOTER -->
-  <!-- Footer Enhanced -->
-<div id="footer-placeholder"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="asset/main.js"></script>
-  <script src="asset/components.js"></script>
+  <div id="footer-placeholder"></div>
+  
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="asset/js/main.js"></script>
+  
 </body>
 </html>
